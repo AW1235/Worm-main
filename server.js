@@ -6,12 +6,18 @@ const serveStatic = require('serve-static')
 const PORT = 3000;
 app.use(express.static('public'));
 
-app.use(serveStatic('public/ftp', { index: ['index.html', 'style.css'] }))
+app.use(serveStatic('public/ftp', { index: ['index.html', 'style.css', 'powers.html', ] }))
 
 // HTML form
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
+
+function sum(a, b) {
+  return a+ b;
+}
+
+module.exports = sum;
 
 // Server Listen to this PORT
 app.listen(PORT, () => {
