@@ -38,3 +38,30 @@ con.connect(function(err) {
   console.log("Connected!");
 });
 
+async function loadCharacters() {
+
+    const response = await fetch("characters.json");
+    const characters = await response.json();
+
+    let names = characters.map(c => c.name);
+
+    autocomplete(document.getElementById("myInput"), names);
+
+}
+
+loadCharacters();
+function showCharacter(name, characters) {
+
+    let character = characters.find(c => c.name === name);
+
+    if (!character) return;
+
+    document.getElementById("result").innerHTML = `
+        <h3>${character.name}</h3>
+        <p><b>Age:</b> ${character.age}</p>
+        <p><b>Affiliation:</b> ${character.affiliation}</p>
+        <p><b>Power:</b> ${character.power}</p>
+        <p><b>Classification:</b> ${character.powerClassification}</p>
+        <p><b>First Appearance:</b> ${character.firstAppearance}</p>
+    `;
+}
