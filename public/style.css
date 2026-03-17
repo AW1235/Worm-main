@@ -167,3 +167,50 @@ input[type="submit"]:hover {
   background-color: #4CAF50 !important;
   color: white;
 }
+
+.character-card {
+
+margin: 40px auto;
+padding: 30px;
+width: 420px;
+
+background: #1b1b1b;
+border-radius: 10px;
+
+box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.character-card h2 {
+
+margin-top: 0;
+color: #6bd3ff;
+}
+
+.character-grid {
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+
+margin-top: 20px;
+}
+
+.character-grid div {
+
+background: #262626;
+padding: 10px;
+border-radius: 6px;
+}
+
+.character-grid strong {
+
+display: block;
+font-size: 12px;
+color: #aaa;
+}
+
+.character-grid span {
+
+font-size: 15px;
+color: white;
+}
