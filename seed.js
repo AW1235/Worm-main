@@ -38,25 +38,51 @@ db.serialize(() => {
     )`
   );
 
-  const stmt = db.prepare(
-    `INSERT OR IGNORE INTO characters
+  const upsert = db.prepare(
+    `INSERT INTO characters
     (name, age, affiliation, power, powerClassification, firstAppearance)
-    VALUES (?, ?, ?, ?, ?, ?)`
+    VALUES (?, ?, ?, ?, ?, ?)
+    ON CONFLICT(name) DO UPDATE SET
+      age = excluded.age,
+      affiliation = excluded.affiliation,
+      power = excluded.power,
+      powerClassification = excluded.powerClassification,
+      firstAppearance = excluded.firstAppearance`
   );
 
+  const names = [];
   seedData.forEach((character) => {
-    stmt.run(
-      character.name || null,
-      character.age || null,
-      character.affiliation || null,
-      character.power || null,
-      character.powerClassification || null,
-      character.firstAppearance || null
+    if (!character || !character.name) return;
+    names.push(character.name);
+    upsert.run(
+      character.name,
+      character.age ?? null,
+      character.affiliation ?? null,
+      character.power ?? null,
+      character.powerClassification ?? null,
+      character.firstAppearance ?? null
     );
   });
 
-  stmt.finalize(() => {
-    console.log(`Seeded ${seedData.length} characters into ${dbPath}`);
-    db.close();
+  upsert.finalize(() => {
+    if (names.length === 0) {
+      console.warn('Seed data is empty; skipping sync cleanup');
+      db.close();
+      return;
+    }
+
+    const placeholders = names.map(() => '?').join(', ');
+    db.run(
+      `DELETE FROM characters WHERE name NOT IN (${placeholders})`,
+      names,
+      (deleteErr) => {
+        if (deleteErr) {
+          console.error('SQLite cleanup failed:', deleteErr.message);
+        } else {
+          console.log(`Synced ${names.length} characters into ${dbPath}`);
+        }
+        db.close();
+      }
+    );
   });
 });
