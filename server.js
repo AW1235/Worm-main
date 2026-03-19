@@ -168,8 +168,7 @@ app.get('/api/characters/list', (req, res) => {
     params.push(gender);
   }
   if (powerClassification) {
-    where.push('powerClassification = ?');
-    params.push(powerClassification);
+    where.push('powerClassification IS NOT NULL');
   }
   if (affiliation) {
     where.push('affiliation = ?');
@@ -184,9 +183,20 @@ app.get('/api/characters/list', (req, res) => {
     ORDER BY name
   `;
 
+  const normalizeClassification = (value) => {
+    const match = String(value || '').trim().match(/[A-Za-z]+/);
+    return match ? match[0] : '';
+  };
+
   db.all(sql, params, (err, rows) => {
     if (err) return res.status(500).json({ error: err.message });
-    res.json(rows || []);
+    let results = rows || [];
+    if (powerClassification) {
+      results = results.filter(
+        (row) => normalizeClassification(row.powerClassification) === powerClassification
+      );
+    }
+    res.json(results);
   });
 });
 
@@ -195,6 +205,11 @@ app.get('/api/characters/filters', (req, res) => {
 
   const distinctSql = (column) =>
     `SELECT DISTINCT ${column} AS value FROM characters WHERE ${column} IS NOT NULL AND ${column} != '' ORDER BY ${column}`;
+
+  const normalizeClassification = (value) => {
+    const match = String(value || '').trim().match(/[A-Za-z]+/);
+    return match ? match[0] : '';
+  };
 
   db.all(distinctSql('gender'), (genderErr, genders) => {
     if (genderErr) return res.status(500).json({ error: genderErr.message });
@@ -205,9 +220,17 @@ app.get('/api/characters/filters', (req, res) => {
       db.all(distinctSql('affiliation'), (affErr, affiliations) => {
         if (affErr) return res.status(500).json({ error: affErr.message });
 
+        const normalizedClassifications = Array.from(
+          new Set(
+            (classifications || [])
+              .map((row) => normalizeClassification(row.value))
+              .filter((value) => value)
+          )
+        ).sort((a, b) => a.localeCompare(b));
+
         res.json({
           genders: (genders || []).map((row) => row.value),
-          powerClassifications: (classifications || []).map((row) => row.value),
+          powerClassifications: normalizedClassifications,
           affiliations: (affiliations || []).map((row) => row.value),
         });
       });
