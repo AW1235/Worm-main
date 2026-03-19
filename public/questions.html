@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+<title>Questions</title>
 </head>
 <body>
     <div class="header">
@@ -14,5 +15,30 @@
     <a class="active" href="questions.html">Questions</a>
   </div>
 </div>
+
+<section class="content-wrap">
+  <h2>Questions & Feedback</h2>
+  <p class="page-intro">Use this form to ask a question, leave feedback, or share a review.</p>
+
+  <form class="feedback-form">
+    <label for="feedback-name">Name (optional)</label>
+    <input id="feedback-name" type="text" placeholder="Your name" />
+
+    <label for="feedback-email">Email (optional)</label>
+    <input id="feedback-email" type="email" placeholder="you@example.com" />
+
+    <label for="feedback-type">Type</label>
+    <select id="feedback-type">
+      <option value="question">Question</option>
+      <option value="feedback">Feedback</option>
+      <option value="review">Review</option>
+    </select>
+
+    <label for="feedback-message">Message</label>
+    <textarea id="feedback-message" rows="6" placeholder="Write your question or feedback here..."></textarea>
+
+    <button type="submit" class="home-button primary">Send</button>
+  </form>
+</section>
 </body>
 </html>

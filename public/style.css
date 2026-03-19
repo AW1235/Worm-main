@@ -325,12 +325,6 @@ color: white;
   letter-spacing: 0.02em;
 }
 
-.home-button.primary {
-  background: #4CAF50;
-  color: white;
-  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.25);
-}
-
 .home-button.ghost {
   border: 1px solid #3a3f45;
   color: #dbe2ea;
@@ -430,6 +424,43 @@ color: white;
 
 .info-table tr:last-child td {
   border-bottom: none;
+}
+
+.page-intro {
+  margin: 0 0 20px;
+  color: #c8d2dd;
+}
+
+.feedback-form {
+  max-width: 640px;
+  background: #1b1b1b;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+.feedback-form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 13px;
+  color: #aab4bf;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.feedback-form textarea {
+  resize: vertical;
 }
 
 #search-hint {
