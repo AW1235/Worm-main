@@ -4,111 +4,857 @@
     "age": 15,
     "affiliation": "Undersiders",
     "power": "Insect control",
-    "powerClassification": "Master 4",
+    "powerClassification": "Master",
     "firstAppearance": "Arc 1",
-        "gender": "Female"
+    "gender": "Female"
   },
   {
     "name": "Lisa Wilbourn",
     "age": 17,
     "affiliation": "Undersiders",
     "power": "Enhanced deduction",
-    "powerClassification": "Thinker 8",
+    "powerClassification": "Thinker",
     "firstAppearance": "Arc 1",
     "gender": "Female"
   },
-  { "name": "Aegis" },
-  { "name": "Alec" },
-  { "name": "Alabaster" },
-  { "name": "Alan" },
-  { "name": "Alexandria" },
-  { "name": "Amy Dallon" },
-  { "name": "Armsmaster" },
-  { "name": "Assault" },
-  { "name": "Bakuda" },
-  { "name": "Battery" },
-  { "name": "Bentley" },
-  { "name": "Bitch" },
-  { "name": "Brain" },
-  { "name": "Brutus" },
-  { "name": "Browbeat" },
-  { "name": "Canary" },
-  { "name": "Carol" },
-  { "name": "Circus" },
-  { "name": "Clockblocker" },
-  { "name": "Coil" },
-  { "name": "Colin" },
-  { "name": "Cody" },
-  { "name": "Cricket" },
-  { "name": "Crusader" },
-  { "name": "Dauntless" },
-  { "name": "Danny Hebert" },
-  { "name": "Dragon" },
-  { "name": "Eidolon" },
-  { "name": "Emma" },
-  { "name": "Faultline" },
-  { "name": "Fenja" },
-  { "name": "Flashbang" },
-  { "name": "Fog" },
-  { "name": "Gallant" },
-  { "name": "Genesis" },
-  { "name": "Glory Girl" },
-  { "name": "Gregor" },
   { 
-    "name": "Grue",
-    "age": "18",
+    "name": "Aegis", 
+    "age": 17,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Flight, Highly redundant augmented physiology",
+    "powerClassification": "Brute, Mover",
+    "firstAppearance": "Arc 3",
+    "gender": "Male"
+  },
+  { "name": "Alec", 
+    "age": 15,
     "affiliation": "Undersiders",
-    "power": "Darkness Generation and Manipulation",
-    "powerClassification": "Blaster",
+    "power": "Nervous system control",
+    "powerClassification": "Master, Thinker",
     "firstAppearance": "Arc 1",
     "gender": "Male"
   },
-  { "name": "Hookwolf" },
-  { "name": "Judas" },
-  { "name": "Kaiser" },
-  { "name": "Kid Win" },
-  { "name": "Krieg" },
-  { "name": "Labyrinth" },
-  { "name": "Lady Photon" },
-  { "name": "Laserdream" },
-  { "name": "Legend" },
-  { "name": "Leet" },
-  { "name": "Lung" },
-  { "name": "Madison" },
-  { "name": "Manpower" },
-  { "name": "Mark" },
-  { "name": "Menja" },
-  { "name": "Miss Militia" },
-  { "name": "Mush" },
-  { "name": "Neil" },
-  { "name": "Newter" },
-  { "name": "Night" },
-  { "name": "Noelle" },
-  { "name": "Oliver" },
-  { "name": "Oni Lee" },
-  { "name": "Othala" },
-  { "name": "Panacea" },
-  { "name": "Purity" },
-  { "name": "Rachel" },
-  { "name": "Regent" },
-  { "name": "Rune" },
-  { "name": "Sarah" },
-  { "name": "Shadow Stalker" },
-  { "name": "Shamrock" },
-  { "name": "Shielder" },
-  { "name": "Skidmark" },
-  { "name": "Skitter" },
-  { "name": "Sophia Hess" },
-  { "name": "Squealer" },
-  { "name": "Stormtiger" },
-  { "name": "Sundancer" },
-  { "name": "Tattletale" },
-  { "name": "Thomas" },
-  { "name": "Trainwreck" },
-  { "name": "Trickster" },
-  { "name": "Uber" },
-  { "name": "Velocity" },
-  { "name": "Victor" },
-  { "name": "Vista" },
-  { "name": "Zoe" }
+  {
+    "name": "Alabaster",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Periodic body restoration",
+    "powerClassification": "Breaker, Thinker",
+    "firstAppearance": "Arc 7",
+    "gender": "Male"
+    },
+  { 
+    "name": "Alan Barnes",
+    "age": "Unknown",
+    "affiliation": "Independent",
+    "power": "None",
+    "powerClassification": "None",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"
+  },
+  { 
+    "name": "Alexandria",
+    "age": "Unknown",
+    "affiliation": "Triumvirate, PRT",
+    "power": "Physical invulnerability, Flight, Enhanced strength, Perfect memory, Enhanced senses, Enhanced speed",
+    "powerClassification": "Mover, Brute, Thinker",
+    "firstAppearance": "Arc 8",
+    "gender": "Female"
+  },
+  { 
+    "name": "Amelia Dallon",
+    "age": 17,
+    "affiliation": "Independent",
+    "power": "Biokinesis",
+    "powerClassification": "Striker",
+    "firstAppearance": "Arc 2",
+    "gender": "Female"
+  },
+  { 
+    "name": "Armsmaster",
+    "age": "Unknown",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Enhanced prowess with efficiency based technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 1",
+    "gender": "Male" 
+  },
+  {
+    "name": "Assault",
+    "age": "Unknown",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Kinetic energy manipulation",
+    "powerClassification": "Striker",
+    "firstAppearance": "Arc 6",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Bakuda",
+    "age": "Unknown",
+    "affiliation": "Azn Bad Boys",
+    "power": "Enhanced prowess with explosive technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 4",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Battery",
+    "age":  22,
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Burst enhanced speed, strength, durability, electro-magnetic manipulation",
+    "powerClassification": "Mover, Breaker, Brute, Blaster",
+    "firstAppearance": "Arc 5",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Bentley",
+    "age": "Unknown",
+    "affiliation": "Bitch's Dogs",
+    "power": "Bitch based enhancement",
+    "powerClassification": "Brute, Changer, Mover",
+    "firstAppearance": "Arc 10",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Bitch",
+    "age": 16,
+    "affiliation": "Undersiders",
+    "power": "Canine empowerment",
+    "powerClassification": "Master, Trump",
+    "firstAppearance": "Arc 1",
+    "gender": "Female" 
+  },
+  {
+    "name": "Brandish",
+    "age": 35,
+    "affiliation": "New Wave",
+    "power": "Hard light manipulation",
+    "powerClassification": "Striker, Breaker, Brute",
+    "firstAppearance": "Arc 7",
+    "gender": "Female" 
+  },
+  {
+    "name": "Brian Laborn",
+    "age": 17,
+    "affiliation": "Undersiders",
+    "power": "Darkness Generation and Manipulation",
+    "powerClassification": "Blaster, Shaker, Stranger",
+    "firstAppearance": "Arc 1",
+    "gender": "Male"
+  },
+  {
+   "name": "Brutus",
+   "age": "Unknown",
+   "affiliation": "Bitch's Dogs",
+   "power": "Bitch based enhancement",
+   "powerClassification": "Brute, Changer, Mover",
+   "firstAppearance": "Arc 2",
+   "gender": "Male" 
+  },
+  {
+    "name": "Browbeat",
+    "age": 16,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Personal telekinesis and biokinesis",
+    "powerClassification": "Brute, Changer",
+    "firstAppearance": "Arc 3",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Canary",
+    "age": 23,
+    "affiliation": "Independent",
+    "power": "Enhanced and hypnotic voice",
+    "powerClassification": "Master, Shaker",
+    "firstAppearance": "Arc 6",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Carol Dallon",
+    "age": 36,
+    "affiliation": "New Wave",
+    "power": "Hard light manipulation",
+    "powerClassification": "Striker, Breaker, Brute",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Circus",
+    "age": "Unknown",
+    "affiliation": "Coil's Organisation",
+    "power": "Enhanced reflexes, balance, coordination, aim, and spatial sense, Pyrokinesis, Dimensional pocket",
+    "powerClassification": "Stranger, Striker, Thinker, Blaster",
+    "firstAppearance": "Arc 6",
+    "gender": "Genderfluid" 
+  },
+  { 
+    "name": "Clockblocker",
+    "age": 17,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Complete temporary time stop",
+    "powerClassification": "Striker",
+    "firstAppearance": "Arc 3",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Coil",
+    "age": "Unknown",
+    "affiliation": "Coil's Organisation",
+    "power": "Dual timelines",
+    "powerClassification": "Thinker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Colin Wallis", 
+    "age": "Unknown",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Enhanced prowess with efficiency based technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 1",
+    "gender": "Male" 
+  },
+  {
+    "name": "Cricket",
+    "age": "20s",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Enhanced hearing and reflexes, Sound manipulation, Personal sonar",
+    "powerClassification": "Thinker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Crusader",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Partially intangible self duplication",
+    "powerClassification": "Master, Mover",
+    "firstAppearance": "Arc 7",
+    "gender": "Male" 
+  },
+  {
+    "name": "Crystal Pelham",
+    "age": 18,
+    "affiliation": "New Wave",
+    "power": "Lasers, Forcfield generation, Flight, Nightvision",
+    "powerClassification": "Blaster, Mover, Thinker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"
+  },
+  { 
+    "name": "Dauntless",
+    "age": "30s",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Accumulative object enhancement",
+    "powerClassification": "Striker, Trump",
+    "firstAppearance": "Arc 6",
+    "gender": "Male"  
+  },
+  {
+    "name": "Danny Hebert",
+    "age": "40s",
+    "affiliation": "Independent",
+    "power": "None",
+    "powerClassification": "None",
+    "firstAppearance": "Arc 1",
+    "gender": "Male" 
+  },
+  { 
+    "name": "Dinah Alcott",
+    "age": 12,
+    "affiliation": "Independent",
+    "power": "Precognition",
+    "powerClassification": "Thinker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Dragon",
+    "age": "Unknown",
+    "affiliation": "Guild, Protectorate, PRT",
+    "power": "Enhanced prowess with technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 6",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Eidolon",
+    "age": "Unknown",
+    "affiliation": "Triumvirate, PRT",
+    "power": "Powers",
+    "powerClassification": "Trump",
+    "firstAppearance": "Arc 8",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Emma Barnes",
+    "age": 15,
+    "affiliation": "Independent",
+    "power": "None",
+    "powerClassification": "None",
+    "firstAppearance": "Arc 1",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Eric Pelham",
+    "age": "14-15",
+    "affiliation": "New Wave",
+    "power": "Forcefield creation, Hard light blasts, Flight",
+    "powerClassification": "Shaker, Blaster, Mover",
+    "firstAppearance": "",
+    "gender": "Mover" 
+  },
+  { 
+    "name": "Faultline",
+    "age": "20s",
+    "affiliation": "Faultline's Crew",
+    "power": "The ability to separate molecular bonds",
+    "powerClassification": "Striker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Fenja",
+    "age": "20s",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Size manipulation and damage reduction",
+    "powerClassification": "Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Flashbang",
+    "age": 38,
+    "affiliation": "New Wave",
+    "power": "Light orb generation and manipulation",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 7",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Fog",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Noxious gas transformation",
+    "powerClassification": "Changer, Stranger, Shaker, Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Gallant",
+    "age": 17,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Empathic sense, Energy blast, Emotional manipulation",
+    "powerClassification": "Blaster, Master",
+    "firstAppearance": "Arc 3",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Genesis",
+    "age": "Unknown",
+    "affiliation": "Travelers",
+    "power": "Avatar Summon",
+    "powerClassification": "Master, Changer",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Glory Girl",
+    "age": 17,
+    "affiliation": "New Wave",
+    "power": "Temporary forcefield, Forcefield reliant invulnerability, Forcefield reliant enhanced strength, Flight, Emotion changing aura",
+    "powerClassification": "Brute, Mover, Shaker, Master",
+    "firstAppearance": "Arc 2",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Gregor the Snail",
+    "age": "Unknown",
+    "affiliation": "Faultline's Crew",
+    "power": "Chemical creation, Enhanced durability",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Grue",
+    "age": 17,
+    "affiliation": "Undersiders",
+    "power": "Darkness Generation and Manipulation",
+    "powerClassification": "Blaster, Shaker, Stranger",
+    "firstAppearance": "Arc 1",
+    "gender": "Male"
+  },
+  { 
+    "name": "Hannah",
+    "age": "30s",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Transforming weapon, No need for sleep",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 3",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Hookwolf",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Blade wolf transformation",
+    "powerClassification": "Changer, Brute",
+    "firstAppearance": "Arc 5",
+    "gender": "Male" 
+  },
+  {
+    "name": "Judas",
+    "age": "Unknown",
+    "affiliation": "Bitch's Dogs",
+    "power": "Bitch based enhancement",
+    "powerClassification": "Brute, Changer, Mover",
+    "firstAppearance": "Arc 2",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Kaiser",
+    "age": "30s",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Metal object generation",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 4",
+    "gender": "Male"  
+  },
+  {
+    "name": "Kayden Anders",
+    "age": 29,
+    "affiliation": "Empire Eighty Eight",
+    "power": "Light manipulation",
+    "powerClassification": "Blaster, Mover, Breaker",
+    "firstAppearance": "Arc 3",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Kid Win",
+    "age": "Teens",
+    "affiliation": "Brockton Bay Wards",
+    "power": "Enhanced prowess with modular and/or adaptable technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Krieg",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Kinetic force manipulation",
+    "powerClassification": "Brute, Shaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Labyrinth",
+    "age": "Unknown",
+    "affiliation": "Faultline's Crew",
+    "power": "Pocket reality manifestation and manipulation",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Lady Photon",
+    "age": "30s to 40s",
+    "affiliation": "New Wave",
+    "power": "Lasers, Forcfield generation, Flight, Nightvision",
+    "powerClassification": "Blaster, Mover, Thinker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Laserdream",
+    "age": 18,
+    "affiliation": "New Wave",
+    "power": "Lasers, Forcfield generation, Flight, Nightvision",
+    "powerClassification": "Blaster, Mover, Thinker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Legend",
+    "age": "Unknown",
+    "affiliation": "Triumvirate, PRT",
+    "power": "Laser creation and manipulation, Flight, Enhanced speed, Energy form, Enhanced vision",
+    "powerClassification": "Blaster, Mover, Breaker, Thinker",
+    "firstAppearance": "Arc 8",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Leet",
+    "age": "Unknown",
+    "affiliation": "Uber and Leet",
+    "power": "The ability to create any technology he can imagine only once",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 4",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Lung",
+    "age": "Unknown",
+    "affiliation": "Azn Bad Boys",
+    "power": "Pyrokinesis, Regeneration, Dragon transformation, Enhanced hearing",
+    "powerClassification": "Brute, Changer, Blaster, Mover, Thinker",
+    "firstAppearance": "Arc 1",
+    "gender": "Male"  
+  },
+  {
+    "name": "Madison Clements",
+    "age": 15,
+    "affiliation": "Independent",
+    "power": "None",
+    "powerClassification": "None",
+    "firstAppearance": "Arc 1",
+    "gender": "Female"  
+  },
+  {
+    "name": "Manpower",
+    "age": "35-45",
+    "affiliation": "New Wave",
+    "power": "Enhanced strength, Enhanced durability, Electro-magnetic manipulation",
+    "powerClassification": "Brute, Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Mark Dallon",
+    "age": 38,
+    "affiliation": "New Wave",
+    "power": "Light orb generation and manipulation",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 7",
+    "gender": "Male"  
+  },
+  {
+    "name": "Max Anders"
+  },
+  { 
+    "name": "Menja",
+    "age": "20s",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Size manipulation and damage reduction",
+    "powerClassification": "Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Miss Militia",
+    "age": "30s",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Transforming weapon, No need for sleep",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 3",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Mush",
+    "age": "Unknown",
+    "affiliation": "Merchants",
+    "power": "Body modification",
+    "powerClassification": "Changer",
+    "firstAppearance": "Arc 5",
+    "gender": "Male" 
+  },
+  {
+    "name": "Narwhal",
+    "age": "Unknown",
+    "affiliation": "PRT",
+    "power": "Forcefield creation and manipulation",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 8",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Neil Pelham",
+    "age": "35-45",
+    "affiliation": "New Wave",
+    "power": "Enhanced strength, Enhanced durability, Electro-magnetic manipulation",
+    "powerClassification": "Brute, Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+     
+  },
+  { 
+    "name": "Newter",
+    "age": "Unknown",
+    "affiliation": "Faultline's Crew",
+    "power": "Hallucinogenic bodily fluids, Altered physiology, Enhanced durability",
+    "powerClassification": "Striker, Mover",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  {
+    "name": "Night",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Monster transformation when unobserved",
+    "powerClassification": "Breaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Noelle",
+    "age": "Unknown",
+    "affiliation": "Travelers",
+    "power": "Unknown",
+    "powerClassification": "Unknown",
+    "firstAppearance": "Arc 8",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Oliver",
+    "age": "Unknown",
+    "affiliation": "Travelers",
+    "power": "Unknown",
+    "powerClassification": "Unknown",
+    "firstAppearance": "Arc 11",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Oni Lee",
+    "age": "Unknown",
+    "affiliation": "Azn Bad Boys",
+    "power": "Line of sight teleportation, Temporary teleportation reliant duplication",
+    "powerClassification": "Mover, Master",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Othala",
+    "age": "Teens",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Temporary granting of pyrokinesis, regeneration, invincibility, enhanced speed, or enhanced strength to others",
+    "powerClassification": "Trump",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Paige Mcabee",
+    "age": 23,
+    "affiliation": "Independent",
+    "power": "Enhanced and hypnotic voice",
+    "powerClassification": "Master, Shaker",
+    "firstAppearance": "Arc 6",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Panacea",
+    "age": 17,
+    "affiliation": "Independent",
+    "power": "Biokinesis",
+    "powerClassification": "Striker",
+    "firstAppearance": "Arc 2",
+    "gender": "Female"
+  },
+  { 
+    "name": "Purity",
+    "age": 29,
+    "affiliation": "Empire Eighty Eight",
+    "power": "Light manipulation",
+    "powerClassification": "Blaster, Mover, Breaker",
+    "firstAppearance": "Arc 3",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Rachel Lindt",
+    "age": 16,
+    "affiliation": "Undersiders",
+    "power": "Canine empowerment",
+    "powerClassification": "Master, Trump",
+    "firstAppearance": "Arc 1",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Regent",
+    "age": 15,
+    "affiliation": "Undersiders",
+    "power": "Nervous system control",
+    "powerClassification": "Master, Thinker",
+    "firstAppearance": "Arc 1",
+    "gender": "Male"
+  },
+  { 
+    "name": "Rune",
+    "age": "Teens",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Telekinesis",
+    "powerClassification": "Striker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Sarah Pelham",
+    "age": "30s to 40s",
+    "affiliation": "New Wave",
+    "power": "Lasers, Forcfield generation, Flight, Nightvision",
+    "powerClassification": "Blaster, Mover, Thinker, Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Shadow Stalker",
+    "age": 15,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Shadow state transformation",
+    "powerClassification": "Breaker, Mover, Stranger",
+    "firstAppearance": "Arc 1",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Shamrock",
+    "age": "Unknown",
+    "affiliation": "Faultline's Crew",
+    "power": "Small scale probability manipulation",
+    "powerClassification": "Thinker, Shaker",
+    "firstAppearance": "Arc 11",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Shielder",
+    "age": "14-15",
+    "affiliation": "New Wave",
+    "power": "Forcefield creation, Hard light blasts, Flight",
+    "powerClassification": "Shaker, Blaster, Mover",
+    "firstAppearance": "",
+    "gender": "Mover"  
+  },
+  { 
+    "name": "Skidmark",
+    "age": "Unknown",
+    "affiliation": "Merchants",
+    "power": "Push type forcefield application",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Skitter", 
+    "age": 15,
+    "affiliation": "Undersiders",
+    "power": "Insect control",
+    "powerClassification": "Master",
+    "firstAppearance": "Arc 1",
+    "gender": "Female"
+  },
+  { 
+    "name": "Sophia Hess", 
+    "age": 15,
+    "affiliation": "Brockton Bay Wards",
+    "power": "Shadow state transformation",
+    "powerClassification": "Breaker, Mover, Stranger",
+    "firstAppearance": "Arc 1",
+    "gender": "Female"
+  },
+  { 
+    "name": "Squealer",
+    "age": "Unknown",
+    "affiliation": "Merchants",
+    "power": "Enhanced prowess with vehicles and vehicle based technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Stormtiger",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Aerokinesis",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 7",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Sundancer",
+    "age": "17-21",
+    "affiliation": "Travelers",
+    "power": "Miniature sun creation, Intense temperature immunity",
+    "powerClassification": "Blaster",
+    "firstAppearance": "Arc 5",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Tattletale",
+    "age": 17,
+    "affiliation": "Undersiders",
+    "power": "Enhanced deduction",
+    "powerClassification": "Thinker",
+    "firstAppearance": "Arc 1",
+    "gender": "Female"
+  },
+  { 
+    "name": "Trainwreck",
+    "age": "Unknown",
+    "affiliation": "Merchants",
+    "power": "Enhanced prowess with power armour technology",
+    "powerClassification": "Tinker",
+    "firstAppearance": "Arc 6",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Trickster",
+    "age": "Unknown",
+    "affiliation": "Travelers",
+    "power": "Location swapping",
+    "powerClassification": "Mover",
+    "firstAppearance": "Arc 5",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Uber",
+    "age": "Unknown",
+    "affiliation": "Uber and Leet",
+    "power": "Near instant skill mastery and gain",
+    "powerClassification": "Thinker",
+    "firstAppearance": "Arc 4",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Velocity",
+    "age": "Unknown",
+    "affiliation": "Brockton Bay Protectorate",
+    "power": "Speed manipulation, Reality interaction altering",
+    "powerClassification": "Breaker, Mover",
+    "firstAppearance": "Arc 6",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Victor",
+    "age": "Unknown",
+    "affiliation": "Empire Eighty Eight",
+    "power": "Skill stealing",
+    "powerClassification": "Thinker",
+    "firstAppearance": "Arc 7",
+    "gender": "Male"  
+  },
+  { 
+    "name": "Victoria Dallon",
+    "age": 17,
+    "affiliation": "New Wave",
+    "power": "Temporary forcefield, Forcefield reliant invulnerability, Forcefield reliant enhanced strength, Flight, Emotion changing aura",
+    "powerClassification": "Brute, Mover, Shaker, Master",
+    "firstAppearance": "Arc 2",
+    "gender": "Female" 
+  },
+  { 
+    "name": "Vista",
+    "age": "12-13",
+    "affiliation": "Brockton Bay Wards",
+    "power": "Space warping",
+    "powerClassification": "Shaker",
+    "firstAppearance": "Arc 2",
+    "gender": "Female"  
+  },
+  { 
+    "name": "Zoe Barnes",
+    "age": "Unknown",
+    "affiliation": "None",
+    "power": "None",
+    "powerClassification": "None",
+    "firstAppearance": "None",
+    "gender": "Female"  
+  }
 ]
