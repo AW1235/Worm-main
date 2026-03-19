@@ -16,6 +16,7 @@ function renderCharacter(character) {
         <div><strong>Power</strong><span>${character.power ?? 'Unknown'}</span></div>
         <div><strong>Classification</strong><span>${character.powerClassification ?? 'Unknown'}</span></div>
         <div><strong>First Appearance</strong><span>${character.firstAppearance ?? 'Unknown'}</span></div>
+        <div><strong>Gender</strong><span>${character.gender ?? 'Unknown'}</span></div>
       </div>
     </div>
   `;

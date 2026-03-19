@@ -43,68 +43,94 @@ function connectDb() {
         affiliation TEXT,
         power TEXT,
         powerClassification TEXT,
-        firstAppearance TEXT
+        firstAppearance TEXT,
+        gender TEXT
       )`
     );
 
-    const seedPath = path.join(__dirname, 'public', 'characters.json');
-    if (!fs.existsSync(seedPath)) {
-      console.warn('Seed file not found:', seedPath);
-      return;
-    }
-
-    let seedData = [];
-    try {
-      seedData = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
-    } catch (parseErr) {
-      console.error('Seed JSON parse failed:', parseErr.message);
-      return;
-    }
-
-    const upsert = database.prepare(
-      `INSERT INTO characters
-      (name, age, affiliation, power, powerClassification, firstAppearance)
-      VALUES (?, ?, ?, ?, ?, ?)
-      ON CONFLICT(name) DO UPDATE SET
-        age = excluded.age,
-        affiliation = excluded.affiliation,
-        power = excluded.power,
-        powerClassification = excluded.powerClassification,
-        firstAppearance = excluded.firstAppearance`
-    );
-
-    const names = [];
-    seedData.forEach((character) => {
-      if (!character || !character.name) return;
-      names.push(character.name);
-      upsert.run(
-        character.name,
-        character.age ?? null,
-        character.affiliation ?? null,
-        character.power ?? null,
-        character.powerClassification ?? null,
-        character.firstAppearance ?? null
-      );
-    });
-
-    upsert.finalize(() => {
-      if (names.length === 0) {
-        console.warn('Seed data is empty; skipping sync cleanup');
+    const syncSeedData = () => {
+      const seedPath = path.join(__dirname, 'public', 'characters.json');
+      if (!fs.existsSync(seedPath)) {
+        console.warn('Seed file not found:', seedPath);
         return;
       }
 
-      const placeholders = names.map(() => '?').join(', ');
-      database.run(
-        `DELETE FROM characters WHERE name NOT IN (${placeholders})`,
-        names,
-        (deleteErr) => {
-          if (deleteErr) {
-            console.error('SQLite cleanup failed:', deleteErr.message);
+      let seedData = [];
+      try {
+        seedData = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+      } catch (parseErr) {
+        console.error('Seed JSON parse failed:', parseErr.message);
+        return;
+      }
+
+      const upsert = database.prepare(
+        `INSERT INTO characters
+        (name, age, affiliation, power, powerClassification, firstAppearance, gender)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(name) DO UPDATE SET
+          age = excluded.age,
+          affiliation = excluded.affiliation,
+          power = excluded.power,
+          powerClassification = excluded.powerClassification,
+          firstAppearance = excluded.firstAppearance,
+          gender = excluded.gender`
+      );
+
+      const names = [];
+      seedData.forEach((character) => {
+        if (!character || !character.name) return;
+        names.push(character.name);
+        upsert.run(
+          character.name,
+          character.age ?? null,
+          character.affiliation ?? null,
+          character.power ?? null,
+          character.powerClassification ?? null,
+          character.firstAppearance ?? null,
+          character.gender ?? null
+        );
+      });
+
+      upsert.finalize(() => {
+        if (names.length === 0) {
+          console.warn('Seed data is empty; skipping sync cleanup');
+          return;
+        }
+
+        const placeholders = names.map(() => '?').join(', ');
+        database.run(
+          `DELETE FROM characters WHERE name NOT IN (${placeholders})`,
+          names,
+          (deleteErr) => {
+            if (deleteErr) {
+              console.error('SQLite cleanup failed:', deleteErr.message);
+              return;
+            }
+            console.log(`Synced ${names.length} characters from characters.json`);
+          }
+        );
+      });
+    };
+
+    // Ensure existing databases get the new column before seeding.
+    database.all('PRAGMA table_info(characters)', (infoErr, rows) => {
+      if (infoErr) {
+        console.error('SQLite table_info failed:', infoErr.message);
+        return;
+      }
+      const hasGender = Array.isArray(rows) && rows.some((col) => col && col.name === 'gender');
+      if (!hasGender) {
+        database.run('ALTER TABLE characters ADD COLUMN gender TEXT', (alterErr) => {
+          if (alterErr) {
+            console.error('SQLite alter table failed:', alterErr.message);
             return;
           }
-          console.log(`Synced ${names.length} characters from characters.json`);
-        }
-      );
+          console.log('Added gender column to characters table');
+          syncSeedData();
+        });
+      } else {
+        syncSeedData();
+      }
     });
   });
 

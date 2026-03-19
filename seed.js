@@ -34,20 +34,22 @@ db.serialize(() => {
       affiliation TEXT,
       power TEXT,
       powerClassification TEXT,
-      firstAppearance TEXT
+      firstAppearance TEXT,
+      gender TEXT
     )`
   );
 
   const upsert = db.prepare(
     `INSERT INTO characters
-    (name, age, affiliation, power, powerClassification, firstAppearance)
+    (name, age, affiliation, power, powerClassification, firstAppearance, gender)
     VALUES (?, ?, ?, ?, ?, ?)
     ON CONFLICT(name) DO UPDATE SET
       age = excluded.age,
       affiliation = excluded.affiliation,
       power = excluded.power,
       powerClassification = excluded.powerClassification,
-      firstAppearance = excluded.firstAppearance`
+      firstAppearance = excluded.firstAppearance,
+      gender = excluded.gender`
   );
 
   const names = [];
@@ -60,7 +62,8 @@ db.serialize(() => {
       character.affiliation ?? null,
       character.power ?? null,
       character.powerClassification ?? null,
-      character.firstAppearance ?? null
+      character.firstAppearance ?? null,
+      character.gender ?? null
     );
   });
 

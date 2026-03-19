@@ -5,7 +5,8 @@
     "affiliation": "Undersiders",
     "power": "Insect control",
     "powerClassification": "Master",
-    "firstAppearance": "Arc 1"
+    "firstAppearance": "Arc 1",
+        "gender": "Female"
   },
   {
     "name": "Lisa Wilbourn",
@@ -13,7 +14,8 @@
     "affiliation": "Undersiders",
     "power": "Enhanced deduction",
     "powerClassification": "Thinker",
-    "firstAppearance": "Arc 1"
+    "firstAppearance": "Arc 1",
+    "gender": "Female"
   },
   { "name": "Aegis" },
   { "name": "Alec" },
@@ -58,7 +60,8 @@
     "affiliation": "Undersiders",
     "power": "Darkness Generation and Manipulation",
     "powerClassification": "Blaster",
-    "firstAppearance": "Arc 1"
+    "firstAppearance": "Arc 1",
+    "gender": "Male"
   },
   { "name": "Hookwolf" },
   { "name": "Judas" },
