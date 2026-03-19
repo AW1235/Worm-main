@@ -1,6 +1,11 @@
 const input = document.getElementById('character-search-input');
 const form = document.getElementById('character-search-form');
 const hint = document.getElementById('search-hint');
+const grid = document.getElementById('character-grid');
+const genderSelect = document.getElementById('filter-gender');
+const classificationSelect = document.getElementById('filter-classification');
+const affiliationSelect = document.getElementById('filter-affiliation');
+const clearFiltersButton = document.getElementById('clear-filters');
 
 let characterNames = [];
 let fetchTimeout = null;
@@ -15,6 +20,70 @@ function fetchCharacters(search) {
   return fetch(`/api/characters?search=${query}`)
     .then((res) => res.json())
     .catch(() => []);
+}
+
+function fetchCharacterList(filters) {
+  const params = new URLSearchParams();
+  if (filters.gender) params.set('gender', filters.gender);
+  if (filters.powerClassification) params.set('powerClassification', filters.powerClassification);
+  if (filters.affiliation) params.set('affiliation', filters.affiliation);
+  const query = params.toString();
+  return fetch(`/api/characters/list${query ? `?${query}` : ''}`)
+    .then((res) => res.json())
+    .catch(() => []);
+}
+
+function fetchFilterOptions() {
+  return fetch('/api/characters/filters')
+    .then((res) => res.json())
+    .catch(() => ({
+      genders: [],
+      powerClassifications: [],
+      affiliations: [],
+    }));
+}
+
+function renderCharacterGrid(rows) {
+  if (!grid) return;
+  grid.innerHTML = '';
+  if (!rows || rows.length === 0) {
+    grid.innerHTML = '<p>No characters match these filters.</p>';
+    return;
+  }
+  rows.forEach((row) => {
+    const link = document.createElement('a');
+    link.className = 'character-tile';
+    link.href = `character.html?name=${encodeURIComponent(row.name)}`;
+    link.textContent = row.name;
+    grid.appendChild(link);
+  });
+}
+
+function populateSelect(select, values) {
+  if (!select) return;
+  const current = select.value;
+  select.innerHTML = '<option value="">All</option>';
+  values.forEach((value) => {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = value;
+    select.appendChild(option);
+  });
+  select.value = current;
+}
+
+function getFilters() {
+  return {
+    gender: genderSelect ? genderSelect.value : '',
+    powerClassification: classificationSelect ? classificationSelect.value : '',
+    affiliation: affiliationSelect ? affiliationSelect.value : '',
+  };
+}
+
+function refreshCharacterList() {
+  return fetchCharacterList(getFilters()).then((rows) => {
+    renderCharacterGrid(rows);
+  });
 }
 
 function refreshNames(search) {
@@ -124,3 +193,24 @@ form.addEventListener('submit', (event) => {
 });
 
 refreshNames('');
+
+if (genderSelect || classificationSelect || affiliationSelect) {
+  fetchFilterOptions().then((data) => {
+    populateSelect(genderSelect, data.genders || []);
+    populateSelect(classificationSelect, data.powerClassifications || []);
+    populateSelect(affiliationSelect, data.affiliations || []);
+  });
+
+  if (genderSelect) genderSelect.addEventListener('change', refreshCharacterList);
+  if (classificationSelect) classificationSelect.addEventListener('change', refreshCharacterList);
+  if (affiliationSelect) affiliationSelect.addEventListener('change', refreshCharacterList);
+  if (clearFiltersButton) {
+    clearFiltersButton.addEventListener('click', () => {
+      if (genderSelect) genderSelect.value = '';
+      if (classificationSelect) classificationSelect.value = '';
+      if (affiliationSelect) affiliationSelect.value = '';
+      refreshCharacterList();
+    });
+  }
+  refreshCharacterList();
+}

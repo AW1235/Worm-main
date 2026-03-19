@@ -27,6 +27,34 @@
 
     <div id="search-hint"></div>
 
+    <div class="characters-page">
+      <aside class="filter-panel">
+        <h3>Filters</h3>
+        <div class="filter-group">
+          <label for="filter-gender">Gender</label>
+          <select id="filter-gender">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-classification">Power Classification</label>
+          <select id="filter-classification">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-affiliation">Affiliation</label>
+          <select id="filter-affiliation">
+            <option value="">All</option>
+          </select>
+        </div>
+        <button type="button" id="clear-filters" class="filter-clear">Clear Filters</button>
+      </aside>
+      <section class="character-list">
+        <div id="character-grid" class="character-list-grid"></div>
+      </section>
+    </div>
+
     <script src="characters.js"></script>
   </body>
 </html>

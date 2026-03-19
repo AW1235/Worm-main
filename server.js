@@ -153,6 +153,68 @@ app.get('/api/characters', (req, res) => {
   });
 });
 
+app.get('/api/characters/list', (req, res) => {
+  if (!db) return res.status(500).json({ error: 'Database not ready' });
+
+  const gender = String(req.query.gender || '').trim();
+  const powerClassification = String(req.query.powerClassification || '').trim();
+  const affiliation = String(req.query.affiliation || '').trim();
+
+  const where = [];
+  const params = [];
+
+  if (gender) {
+    where.push('gender = ?');
+    params.push(gender);
+  }
+  if (powerClassification) {
+    where.push('powerClassification = ?');
+    params.push(powerClassification);
+  }
+  if (affiliation) {
+    where.push('affiliation = ?');
+    params.push(affiliation);
+  }
+
+  const whereSql = where.length ? `WHERE ${where.join(' AND ')}` : '';
+  const sql = `
+    SELECT id, name, gender, powerClassification, affiliation
+    FROM characters
+    ${whereSql}
+    ORDER BY name
+  `;
+
+  db.all(sql, params, (err, rows) => {
+    if (err) return res.status(500).json({ error: err.message });
+    res.json(rows || []);
+  });
+});
+
+app.get('/api/characters/filters', (req, res) => {
+  if (!db) return res.status(500).json({ error: 'Database not ready' });
+
+  const distinctSql = (column) =>
+    `SELECT DISTINCT ${column} AS value FROM characters WHERE ${column} IS NOT NULL AND ${column} != '' ORDER BY ${column}`;
+
+  db.all(distinctSql('gender'), (genderErr, genders) => {
+    if (genderErr) return res.status(500).json({ error: genderErr.message });
+
+    db.all(distinctSql('powerClassification'), (pcErr, classifications) => {
+      if (pcErr) return res.status(500).json({ error: pcErr.message });
+
+      db.all(distinctSql('affiliation'), (affErr, affiliations) => {
+        if (affErr) return res.status(500).json({ error: affErr.message });
+
+        res.json({
+          genders: (genders || []).map((row) => row.value),
+          powerClassifications: (classifications || []).map((row) => row.value),
+          affiliations: (affiliations || []).map((row) => row.value),
+        });
+      });
+    });
+  });
+});
+
 app.get('/api/characters/by-name', (req, res) => {
   if (!db) return res.status(500).json({ error: 'Database not ready' });
 
